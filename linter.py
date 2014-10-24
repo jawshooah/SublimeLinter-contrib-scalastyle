@@ -20,7 +20,7 @@ class Scalastyle(Linter):
 
     syntax = 'scala'
     executable = 'java'
-    config_file = ('--config', 'scalastyle_config.xml', '~')
+    config_file = ('--config', 'scalastyle-config.xml', '~')
 
     version_args = '--version'
     version_re = r'^scalastyle (?P<version>\d+\.\d+\.\d+)$'
