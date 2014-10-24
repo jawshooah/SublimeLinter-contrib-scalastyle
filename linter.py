@@ -57,7 +57,7 @@ class Scalastyle(Linter):
 
         jarfile = self.get_jarfile_path()
 
-        return command + jarfile
+        return command + [jarfile]
 
 
     def get_jarfile_path(self):
