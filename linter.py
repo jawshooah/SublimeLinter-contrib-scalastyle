@@ -22,9 +22,9 @@ class Scalastyle(Linter):
     executable = 'java'
     config_file = ('--config', 'scalastyle-config.xml', '~')
 
-    version_args = '--version'
-    version_re = r'^scalastyle (?P<version>\d+\.\d+\.\d+)$'
-    version_requirement = '>= 0.5'
+    # version_args = '--version'
+    # version_re = r'^scalastyle (?P<version>\d+\.\d+\.\d+)$'
+    # version_requirement = '>= 0.5'
 
     regex = (
         r'^(?:(?P<error>error)|(?P<warning>warning)) '
