@@ -49,17 +49,10 @@ class Scalastyle(Linter):
     comment_re = None
 
     def cmd(self):
-        """
-        Return the command line to execute.
-
-        """
-
-        command = [self.executable_path, '-jar']
+        """Return the command line to execute."""
 
         jarfile = self.get_jarfile_path()
-
-        return command + [jarfile]
-
+        return [self.executable_path, '-jar', jarfile]
 
     def get_jarfile_path(self):
         """
