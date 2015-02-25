@@ -10,7 +10,7 @@
 
 """This module exports the Scalastyle plugin class."""
 
-import os
+from os import path
 from SublimeLinter.lint import Linter, util
 
 
@@ -66,9 +66,9 @@ class Scalastyle(Linter):
         jarfile = settings.get('jarfile')
 
         # Expand user directory shortcuts
-        jarfile = os.path.expanduser(jarfile)
+        jarfile = path.expanduser(jarfile)
 
         # Expand environment variables
-        jarfile = os.path.expandvars(jarfile)
+        jarfile = path.expandvars(jarfile)
 
         return jarfile
