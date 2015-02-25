@@ -1,0 +1,3 @@
+PreCommit:
+  PythonFlake8:
+    flags: ['--max-line-length=120']
