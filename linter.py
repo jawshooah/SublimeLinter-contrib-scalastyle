@@ -21,11 +21,7 @@ class Scalastyle(Linter):
     syntax = 'scala'
     executable = 'java'
     cmd = None
-    config_file = ('--config', 'scalastyle-config.xml', '~')
-
-    # version_args = '--version'
-    # version_re = r'^scalastyle (?P<version>\d+\.\d+\.\d+)$'
-    # version_requirement = '>= 0.5'
+    config_file = ('--config', 'scalastyle-config.xml')
 
     regex = (
         r'^(?:(?P<error>error)|(?P<warning>warning)) '
