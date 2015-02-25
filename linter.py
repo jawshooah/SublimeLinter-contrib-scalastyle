@@ -33,7 +33,7 @@ class Scalastyle(Linter):
 
     multiline = False
     line_col_base = (1, 0)
-    tempfile_suffix = '-'
+    tempfile_suffix = 'scala'
     error_stream = util.STREAM_BOTH
     selectors = {}
     word_re = r'^([-\w]+|([\'"])[-\w ]+\2)'
