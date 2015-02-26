@@ -24,11 +24,11 @@ class Scalastyle(Linter):
     config_file = ('--config', 'scalastyle-config.xml')
 
     regex = (
-        r'^(?:(?P<error>error)|(?P<warning>warning)) '
-        r'(?:file=(?P<file>.+?)) '
-        r'(?:message=(?P<message>[^\r\n]+)) '
-        r'(?:line=(?P<line>\d+)) '
-        r'(?:column=(?P<col>\d+))$'
+        r'^(?:(?P<error>error)|(?P<warning>warning))'
+        r'(?: file=(?P<file>.+?))'
+        r'(?: message=(?P<message>.+?))'
+        r'(?: line=(?P<line>\d+))?'
+        r'(?: column=(?P<col>\d+))?$'
     )
 
     multiline = False
@@ -53,7 +53,7 @@ class Scalastyle(Linter):
 
     def get_jarfile_path(self):
         """
-        Return the absolute path to the scalastyle jarfile.
+        Return the absolute path to the scalastyle jar file.
 
         Expand user shortcut (~) and environment variables.
 
@@ -72,3 +72,18 @@ class Scalastyle(Linter):
         jar_file = path.realpath(jar_file)
 
         return jar_file
+
+    def split_match(self, match):
+        """
+        Return the components of the match.
+
+        We override this method so that errors with no line number can be displayed.
+
+        """
+
+        match, line, col, error, warning, message, near = super().split_match(match)
+
+        if line is None and message:
+            line = 0
+
+        return match, line, col, error, warning, message, near
