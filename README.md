@@ -19,8 +19,9 @@ be downloaded [here][scalastyle-download].
 ### Linter configuration
 In order for `scalastyle` to be executed by SublimeLinter, you must ensure that
 `java`'s path is available to SublimeLinter. Before going any further, please
-read and follow the steps in [“Finding a linter executable”][finding-executable]
-through “Validating your PATH” in the documentation.
+read and follow the steps in
+[“Finding a linter executable”][finding-executable] through “Validating your
+PATH” in the documentation.
 
 Once you have installed and configured `scalastyle`, you can proceed to install
 the SublimeLinter-contrib-scalastyle plugin if it is not yet installed.
@@ -34,14 +35,14 @@ you are doing so we won’t cover that here.
 To install via Package Control, do the following:
 
 1. Within Sublime Text, bring up the [Command Palette][cmd] and type `install`.
-   Among the commands you should see `Package Control: Install Package`. If that
-   command is not highlighted, use the keyboard or mouse to select it. There
-   will be a pause of a few seconds while Package Control fetches the list of
-   available plugins.
+   Among the commands you should see `Package Control: Install Package`. If
+   that command is not highlighted, use the keyboard or mouse to select it.
+   There will be a pause of a few seconds while Package Control fetches the
+   list of available plugins.
 
-1. When the plugin list appears, type `scalastyle`. Among the entries you should
-   see `SublimeLinter-contrib-scalastyle`. If that entry is not highlighted, use
-   the keyboard or mouse to select it.
+1. When the plugin list appears, type `scalastyle`. Among the entries you
+   should see `SublimeLinter-contrib-scalastyle`. If that entry is not
+   highlighted, use the keyboard or mouse to select it.
 
 ## Settings
 For general information on how SublimeLinter works with settings, please see
@@ -55,8 +56,8 @@ SublimeLinter-contrib-scalastyle provides its own settings.
 |:------|:---|:----------|
 |jar_file|`str`|The path to the `scalastyle` `jar` file.|
 
-By default, the linter plugin looks for a file called `scalastyle-config.xml` in
-the current directory and its parents. To override the config file path, you
+By default, the linter plugin looks for a file called `scalastyle-config.xml`
+in the current directory and its parents. To override the config file path, you
 would add this to the linter settings:
 
 ```json
@@ -84,8 +85,8 @@ Please note that modifications should follow these coding guidelines:
 
 ##### IMPORTANT!
 Also note that this repository uses [overcommit][overcommit] as a validation
-tool. Before making any changes, please [install overcommit][overcommit-install]
-in your local repository.
+tool. Before making any changes, please
+[install overcommit][overcommit-install] in your local repository.
 
 Thank you for helping out!
 
