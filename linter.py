@@ -38,7 +38,7 @@ class Scalastyle(Linter):
     selectors = {}
     word_re = r'^([-\w]+|([\'"])[-\w ]+\2)'
     defaults = {
-        'jarfile': ''
+        'jar_file': ''
     }
     inline_settings = None
     inline_overrides = None
@@ -47,8 +47,9 @@ class Scalastyle(Linter):
     def cmd(self):
         """Return the command line to execute."""
 
-        jarfile = self.get_jarfile_path()
-        return [self.executable_path, '-jar', jarfile]
+        jar_file = self.get_jarfile_path()
+
+        return [self.executable_path, '-jar', jar_file]
 
     def get_jarfile_path(self):
         """
@@ -59,12 +60,15 @@ class Scalastyle(Linter):
         """
 
         settings = self.get_view_settings()
-        jarfile = settings.get('jarfile')
+        jar_file = settings.get('jar_file')
 
         # Expand user directory shortcuts
-        jarfile = path.expanduser(jarfile)
+        jar_file = path.expanduser(jar_file)
 
         # Expand environment variables
-        jarfile = path.expandvars(jarfile)
+        jar_file = path.expandvars(jar_file)
 
-        return jarfile
+        # Get canonical path
+        jar_file = path.realpath(jar_file)
+
+        return jar_file
