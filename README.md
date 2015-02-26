@@ -82,6 +82,11 @@ Please note that modifications should follow these coding guidelines:
 - Please use descriptive variable names, no abbrevations unless they are very
   well known.
 
+##### IMPORTANT!
+Also note that this repository uses [overcommit][overcommit] as a validation
+tool. Before making any changes, please [install overcommit][overcommit-install]
+in your local repository.
+
 Thank you for helping out!
 
 [cmd]: http://docs.sublimetext.info/en/sublime-text-3/extensibility/command_palette.html
@@ -90,6 +95,8 @@ Thank you for helping out!
 [installation]: http://sublimelinter.readthedocs.org/en/latest/installation.html
 [linter-settings]: http://sublimelinter.readthedocs.org/en/latest/linter_settings.html
 [locating-executables]: http://sublimelinter.readthedocs.org/en/latest/usage.html#how-linter-executables-are-located
+[overcommit]: https://github.com/causes/overcommit
+[overcommit-install]: https://github.com/causes/overcommit#installation
 [pc]: https://sublime.wbond.net/installation
 [scalastyle]: http://www.scalastyle.org
 [scalastyle-download]: http://www.scalastyle.org/command-line.html
