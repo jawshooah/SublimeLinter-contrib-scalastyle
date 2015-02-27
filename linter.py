@@ -35,7 +35,6 @@ class Scalastyle(Linter):
     line_col_base = (1, 0)
     tempfile_suffix = 'scala'
     error_stream = util.STREAM_BOTH
-    selectors = {}
     word_re = r'^([-\w]+|([\'"])[-\w ]+\2)'
     defaults = {
         'jar_file': ''
