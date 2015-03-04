@@ -2,6 +2,7 @@ SublimeLinter-contrib-scalastyle
 ================================
 
 [![Build Status][travis-badge]][travis]
+[![Codacy Badge][codacy-badge]][codacy]
 
 This linter plugin for [SublimeLinter][docs] provides an interface to
 [scalastyle][scalastyle]. It will be used with files that have the “scala”
@@ -91,6 +92,8 @@ tool. Before making any changes, please
 Thank you for helping out!
 
 [cmd]: http://docs.sublimetext.info/en/sublime-text-3/extensibility/command_palette.html
+[codacy]: https://www.codacy.com/public/haginsjosh/SublimeLinter-contrib-scalastyle
+[codacy-badge]: https://www.codacy.com/project/badge/6763b71dc0184aec875ab191cd9da3b8
 [docs]: http://sublimelinter.readthedocs.org
 [finding-executable]: http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable
 [installation]: http://sublimelinter.readthedocs.org/en/latest/installation.html
